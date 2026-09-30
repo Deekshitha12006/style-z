@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Style-Z | Your Personal Stylist</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- LANDING PAGE -->
+<div id="page-landing" class="page active">
+  <div class="landing-bg">
+    <div class="floating-icons">
+      <span class="fi fi1">👗</span><span class="fi fi2">👠</span>
+      <span class="fi fi3">💍</span><span class="fi fi4">👜</span>
+      <span class="fi fi5">🧣</span><span class="fi fi6">👒</span>
+      <span class="fi fi7">✨</span><span class="fi fi8">🌸</span>
+    </div>
+    <div class="landing-content">
+      <div class="brand-badge">✦ LUXURY FASHION AI ✦</div>
+      <h1 class="landing-title">Style-Z</h1>
+      <p class="landing-subtitle">Your personal AI stylist. Upload your wardrobe,<br>get the perfect outfit — every time.</p>
+      <div class="features-row">
+        <div class="feature-chip">🎯 Personalized</div>
+        <div class="feature-chip">👗 Your Wardrobe</div>
+        <div class="feature-chip">✨ AI-Powered</div>
+      </div>
+      <button class="btn-primary btn-large" id="get-started-btn">Get Started →</button>
+    </div>
+  </div>
+</div>
+
+<!-- GENDER PAGE -->
+<div id="page-gender" class="page">
+  <div class="page-inner">
+    <div class="step-header">
+      <div class="step-badge">Step 1 of 5</div>
+      <h2>Who are we styling today?</h2>
+      <p>Choose your style profile to get personalized recommendations</p>
+    </div>
+    <div class="gender-cards">
+      <div class="gender-card" id="card-female">
+        <div class="gender-icon">👩</div>
+        <h3>Female</h3>
+        <p>Sarees, Kurtis, Lehengas, Western &amp; more</p>
+      </div>
+      <div class="gender-card" id="card-male">
+        <div class="gender-icon">👨</div>
+        <h3>Male</h3>
+        <p>Kurtas, Suits, Sherwanis, Casual &amp; more</p>
+      </div>
+    </div>
+    <div class="nav-bar">
+      <button class="btn-secondary" id="back-gender">← Back</button>
+    </div>
+  </div>
+</div>
+
+<!-- PROFILE PAGE -->
+<div id="page-profile" class="page">
+  <div class="page-inner">
+    <div class="step-header">
+      <div class="step-badge">Step 2 of 5</div>
+      <h2>Your Style Profile</h2>
+      <p>Help us tailor your recommendations</p>
+    </div>
+    <div class="profile-form">
+      <div class="form-section">
+        <label>Body Shape</label>
+        <div id="body-shape-options" class="shape-grid"></div>
+      </div>
+      <div class="form-section">
+        <label>Size</label>
+        <div class="size-grid" id="size-grid"></div>
+      </div>
+      <div class="form-section">
+        <label>Skin Tone</label>
+        <div class="skin-grid">
+          <div class="skin-btn" style="background:#FDDBB4" data-tone="Fair"><span>Fair</span></div>
+          <div class="skin-btn" style="background:#F1C27D" data-tone="Light"><span>Light</span></div>
+          <div class="skin-btn" style="background:#E0AC69" data-tone="Medium"><span>Medium</span></div>
+          <div class="skin-btn" style="background:#C68642" data-tone="Tan"><span>Tan</span></div>
+          <div class="skin-btn" style="background:#8D5524" data-tone="Deep"><span>Deep</span></div>
+          <div class="skin-btn" style="background:#4A2912" data-tone="Rich"><span>Rich</span></div>
+        </div>
+      </div>
+      <div class="form-section">
+        <label>Height</label>
+        <div class="height-controls">
+          <div class="height-toggle">
+            <button id="btn-cm" class="toggle-active">cm</button>
+            <button id="btn-ft">ft</button>
+          </div>
+          <div class="height-display">
+            <input type="number" id="height-input" value="165" min="100" max="220" />
+            <span id="height-unit-label">cm</span>
+          </div>
+          <input type="range" id="height-slider" min="100" max="220" value="165" />
+        </div>
+      </div>
+    </div>
+    <div class="nav-bar">
+      <button class="btn-secondary" id="back-profile">← Back</button>
+      <button class="btn-primary" id="continue-profile">Continue →</button>
+    </div>
+  </div>
+</div>
+
+<!-- OCCASIONS PAGE -->
+<div id="page-occasions" class="page">
+  <div class="page-inner">
+    <div class="step-header">
+      <div class="step-badge">Step 3 of 5</div>
+      <h2>What's the occasion?</h2>
+      <p>Select all occasions you dress for</p>
+    </div>
+    <div class="occasions-grid" id="occasions-grid"></div>
+    <div class="nav-bar">
+      <button class="btn-secondary" id="back-occasions">← Back</button>
+      <button class="btn-primary" id="continue-occasions">Continue →</button>
+    </div>
+  </div>
+</div>
+
+<!-- WARDROBE PAGE -->
+<div id="page-wardrobe" class="page">
+  <div class="page-inner">
+    <div class="step-header">
+      <div class="step-badge">Step 4 of 5</div>
+      <h2>Build Your Wardrobe</h2>
+      <p>Upload photos or describe your clothing items</p>
+    </div>
+    <div id="profile-bar" class="profile-bar"></div>
+    <div class="wardrobe-tabs" id="wardrobe-tabs"></div>
+    <div class="wardrobe-grid" id="wardrobe-grid"></div>
+    <div class="nav-bar">
+      <button class="btn-secondary" id="back-wardrobe">← Back</button>
+      <button class="btn-primary" id="get-outfit-btn">Get My Outfit →</button>
+    </div>
+  </div>
+</div>
+
+<!-- RESULTS PAGE -->
+<div id="page-results" class="page">
+  <div class="page-inner">
+    <div class="step-header">
+      <div class="step-badge">Step 5 of 5</div>
+      <h2>Your Perfect Outfit</h2>
+      <p>Curated just for you by Style-Z AI</p>
+    </div>
+    <div id="profile-bar-results" class="profile-bar"></div>
+    <div id="results-container"></div>
+    <div class="nav-bar">
+      <button class="btn-secondary" id="back-results">← Edit Wardrobe</button>
+      <button class="btn-primary" id="start-over-btn">Start Over</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div id="item-modal" class="modal-overlay">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close-btn">✕</button>
+    <h3 id="modal-title">Add Item</h3>
+    <div class="modal-body">
+      <div class="upload-zone" id="upload-zone">
+        <div id="upload-preview">📷 Click to upload photo</div>
+        <input type="file" id="file-input" accept="image/*" style="display:none" />
+      </div>
+      <p class="modal-or">— or describe it —</p>
+      <textarea id="item-desc" placeholder="e.g. Red silk saree with gold border" rows="3"></textarea>
+      <button class="btn-primary" id="save-item-btn">Add to Wardrobe</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
